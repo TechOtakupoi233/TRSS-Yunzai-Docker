@@ -1,8 +1,8 @@
-name: Docker Image CI
+name: Docker Image CI (ACR)
 
 on:
   schedule:
-  - cron: "0 12 * * *"
+    - cron: "0 12 * * *"
 
 jobs:
 
