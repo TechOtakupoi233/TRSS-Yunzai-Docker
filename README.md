@@ -1,9 +1,9 @@
 # TRSS-Yunzai-Docker
-这是一个 [TRSS-Yunzai](../../../../TimeRainStarSky/Yunzai) 的容器镜像。
+这是一个 [TRSS-Yunzai](../../../../TimeRainStarSky/Yunzai) 的预构建容器镜像。
 
-此镜像包含了运行TRSS-Yunzai所需的环境，通过挂载实机TRSS工作目录来实现在容器中运行bot。
+此镜像包含了运行TRSS-Yunzai所需的环境，通过挂载实机TRSS-Yunzai工作目录来实现在容器中运行bot，以便于将应用部署至各类图形化Docker解决方案中。
 
-**此镜像非开箱即用，镜像内未包含TRSS-Yunzai本体，也未包含协议端/适配器！**
+**此镜像并非开箱即用，镜像内未包含TRSS-Yunzai本体，也未包含协议端/适配器！**
 
 ## 使用方法
 1. Clone [TRSS-Yunzai](../../../../TimeRainStarSky/Yunzai)（若使用现有工作目录则跳过此步骤）
