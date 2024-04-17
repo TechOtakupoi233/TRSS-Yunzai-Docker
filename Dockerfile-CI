@@ -1,0 +1,8 @@
+FROM node
+VOLUME /TRSS-Yunzai
+WORKDIR /TRSS-Yunzai
+RUN apt update && apt install -y redis chromium locales \
+    && npm install pnpm -g && pnpm config set registry https://registry.npmmirror.com
+EXPOSE 2536/tcp
+EXPOSE 50831/tcp
+CMD cd TRSS-Yunzai && pnpm i && pnpm app
