@@ -3,7 +3,7 @@ name: Docker Image CI (ACR)
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 31 * *"
 
 jobs:
 
