@@ -24,4 +24,4 @@ jobs:
       with:
           file: Dockerfile-CI
           push: true
-          tags: noelle-delta/trss-yunzai
+          tags: registry.cn-shenzhen.aliyuncs.com/noelle-delta/trss-yunzai
