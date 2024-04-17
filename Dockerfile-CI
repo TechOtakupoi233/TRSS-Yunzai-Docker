@@ -6,4 +6,4 @@ RUN apt update && apt install -y redis chromium locales \
     && apt clean && rm -rf /tmp/*
 EXPOSE 2536/tcp
 EXPOSE 50831/tcp
-CMD cd TRSS-Yunzai && pnpm i && pnpm app
+CMD pnpm i && pnpm app
