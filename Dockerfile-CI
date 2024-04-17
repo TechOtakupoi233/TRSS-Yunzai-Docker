@@ -2,7 +2,11 @@ FROM node
 VOLUME /TRSS-Yunzai
 WORKDIR /TRSS-Yunzai
 RUN apt update && apt install -y redis chromium locales \
-    && npm install pnpm -g && pnpm config set registry https://registry.npmmirror.com
+    && npm install pnpm -g && pnpm config set registry https://registry.npmmirror.com \
+    && apt clean && rm -rf /tmp/*
 EXPOSE 2536/tcp
 EXPOSE 50831/tcp
-CMD cd TRSS-Yunzai && pnpm i && pnpm app
+CMD git clone --depth 1 https://gitee.com/TimeRainStarSky/TRSS-Yunzai && cd TRSS-Yunzai \
+    && git clone --depth 1 https://gitee.com/TimeRainStarSky/Yunzai-genshin plugins/genshin \
+    && git clone --depth 1 https://gitee.com/yoimiya-kokomi/miao-plugin plugins/miao-plugin \
+    && pnpm i && pnpm app
