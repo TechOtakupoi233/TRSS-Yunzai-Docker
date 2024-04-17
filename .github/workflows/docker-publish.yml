@@ -15,6 +15,7 @@ jobs:
     - name: Alibaba Cloud Container Registry (ACR) Login
       uses: aliyun/acr-login@v1
       with:
+          region-id: cn-shenzhen
           login-server: registry.cn-shenzhen.aliyuncs.com
           username: ${{ secrets.ACR_USERNAME }}
           password: ${{ secrets.ACR_PASSWORD }}
