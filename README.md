@@ -38,7 +38,7 @@ registry.cn-shenzhen.aliyuncs.com/noelle-delta/trss-yunzai
 ```
 services:
   TRSS-Yunzai:
-    iamge: registry.cn-shenzhen.aliyuncs.com/noelle-delta/trss-yunzai
+    image: registry.cn-shenzhen.aliyuncs.com/noelle-delta/trss-yunzai
     container_name: trss-yunzai
     volumes:
       - /DATA/TRSS-Yunzai:/TRSS-Yunzai:rw
