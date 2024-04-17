@@ -36,10 +36,10 @@ registry.cn-shenzhen.aliyuncs.com/noelle-delta/trss-yunzai
 ```
 或使用compose启动容器(注意修改挂载目录为TRSS-Yunzai所在路径！)
 ```
+name: trss-yunzai
 services:
   TRSS-Yunzai:
     image: registry.cn-shenzhen.aliyuncs.com/noelle-delta/trss-yunzai
-    container_name: trss-yunzai
     volumes:
       - /DATA/TRSS-Yunzai:/TRSS-Yunzai:rw
     ports:
