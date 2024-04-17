@@ -6,4 +6,4 @@ RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list \
     && npm --registry=https://registry.npmmirror.com install pnpm -g && pnpm config set registry https://registry.npmmirror.com
 EXPOSE 2536/tcp
 EXPOSE 50831/tcp
-CMD cd TRSS-Yunzai && pnpm i && pnpm app
+CMD pnpm i && pnpm app
