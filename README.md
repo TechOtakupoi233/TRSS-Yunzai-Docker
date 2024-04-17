@@ -25,7 +25,7 @@ git clone --depth 1 https://gitee.com/TimeRainStarSky/Yunzai-genshin plugins/gen
 git clone --depth 1 https://gitee.com/yoimiya-kokomi/miao-plugin plugins/miao-plugin
 git clone --depth 1 https://Yunzai.TRSS.me plugins/TRSS-Plugin
 ```
-3. 启动容器(注意修改挂载目录为TRSS-Yunzai所在路径！)
+3. 使用docker run启动容器(注意修改挂载目录为TRSS-Yunzai所在路径！)
 ```
 docker run -itd \
 -v path/to/TRSS-Yunzai:/TRSS-Yunzai \
@@ -33,6 +33,18 @@ docker run -itd \
 -p 50831:50831 \
 --name TRSS-Yunzai \
 registry.cn-shenzhen.aliyuncs.com/noelle-delta/trss-yunzai
+```
+或使用compose启动容器(注意修改挂载目录为TRSS-Yunzai所在路径！)
+```
+services:
+  TRSS-Yunzai:
+    iamge: registry.cn-shenzhen.aliyuncs.com/noelle-delta/trss-yunzai
+    container_name: trss-yunzai
+    volumes:
+      - /DATA/TRSS-Yunzai:/TRSS-Yunzai:rw
+    ports:
+      - "2536:2536/tcp"
+      - "50831:50831/tcp"
 ```
 4. 配置协议端(详见[原仓库README](../../../../TimeRainStarSky/Yunzai))
 
