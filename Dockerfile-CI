@@ -4,6 +4,7 @@ WORKDIR /TRSS-Yunzai
 RUN apt update && apt install -y redis chromium locales \
     && npm install pnpm -g && pnpm config set registry https://registry.npmmirror.com \
     && apt clean && rm -rf /tmp/*
+    && git config --global --add safe.directory '*'
 EXPOSE 2536/tcp
 EXPOSE 50831/tcp
 CMD pnpm i && pnpm start && pnpm run log
